@@ -4,6 +4,9 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 
 @Entity
 public class Pizza {
@@ -13,10 +16,13 @@ public class Pizza {
 
 
     private Integer id;
+@NotBlank(message = "Il nome non deve essere vuoto!")
     private String name;
 
     private String description;
 
+    @Min(0)
+    @NotNull
     private Integer price;
 
 

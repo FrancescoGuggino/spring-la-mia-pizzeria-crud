@@ -28,6 +28,9 @@
 
             <td>
                 <a th:href="@{/show/{id}(id=${pizza.id})}">detail</a>
+                <a class="btn btn-primary" th:href="@{/pizze/edit/{id}(id=${pizza.id})}">
+                    <button type="submit" class="btn btn-primary">Edit</button>
+                </a>
             </td>
         </tr>
         </tbody>
